@@ -5,6 +5,14 @@ const nextConfig = {
   },
   reactStrictMode: true,
   basePath: '/money',
+  rewrites() {
+    return [
+      {
+        source: '/download/:path*',
+        destination: 'https://cdn.britannica.com/:path*',
+      },
+    ];
+  },
 }
 
 module.exports = nextConfig
